@@ -13,8 +13,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: testw1d1-2
-      id: testw1d1-2
+    - name: test_grade_calculator
+      id: test_grade_calculator
       uses: classroom-resources/autograding-python-grader@v1
       with:
         timeout: 2
@@ -22,6 +22,6 @@ jobs:
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        TESTW1D1-2_RESULTS: "${{steps.testw1d1-2.outputs.result}}"
+        TEST_GRADE_CALCULATOR_RESULTS: "${{steps.test_grade_calculator.outputs.result}}"
       with:
-        runners: testw1d1-2
+        runners: test_grade_calculator
