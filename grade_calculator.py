@@ -19,5 +19,9 @@ if __name__ == '__main__':
     # Call the calculate_average_grade function
     student_name, average_grade = calculate_average_grade()
 
+    #formating average grade to show proper decimal places 
+    #consulted ChatGPT as I had some trouble implimenting this part
+    round_num ="{:.2f}".format(average_grade)  
+
     # Print the student's name and their average grade
-    print("Well,", student_name, "your average score is", average_grade, "%")
+    print(f"Well,", student_name, round_num, "is you average score")
